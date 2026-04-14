@@ -4,7 +4,9 @@ import (
 	"bytes"
 	"os/exec"
 
+	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
+	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
 )
 
@@ -29,7 +31,8 @@ func main() {
 		label.SetText(getWindowsVersion())
 	})
 
-	w.SetContent(widget.NewVBox(label, button))
+	w.SetContent(container.NewVBox(label, button))
 	w.Resize(fyne.NewSize(300, 200))
+
 	w.ShowAndRun()
 }
